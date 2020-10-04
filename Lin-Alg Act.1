@@ -1,0 +1,147 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Linear Algebra (CpE210A)\n",
+    "\n",
+    "### Laboratory 1: Getting acquainted with Python\n",
+    "\n",
+    "Coded and submitted by: \n",
+    "\n",
+    "**Liwag, Martin Phillips E.**\n",
+    "\n",
+    "**58010**\n",
+    "\n",
+    "\n",
+    "\n",
+    "**Lab Exercises:**\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Charmander at level 15\n",
+      "Pidgey at level 11\n",
+      "Sanshrew at level 18\n",
+      "Rattata at level 5\n",
+      "Abra at level 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "party = ['Charmander','Pidgey','Sanshrew','Rattata','Abra']; levels = [15, 11, 18, 5, 4]; #setting up lists\n",
+    "for parties,level in zip(party,levels): #converting the variables into zip function\n",
+    "    print(parties,\"at level\", level) #print input lists"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('Dialga', 2),\n",
+       " ('Regigigas', 3),\n",
+       " ('Unown', 5),\n",
+       " ('Onix', 10),\n",
+       " ('Slowpoke', 18),\n",
+       " ('Swablu', 19),\n",
+       " ('Feebas', 22),\n",
+       " ('Magikarp', 32)]"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "reserves = [('Onix',10),('Slowpoke',18),('Dialga', 2), ('Magikarp', 32),('Feebas', 22),('Swablu', 19), ('Regigigas', 3),('Unown', 5)] #setting up lists\n",
+    "def create_party(element):                     #executing the create_party variable\n",
+    "    return element[1]                          #return in element function\n",
+    "reserves.sort(key=create_party, reverse=False) #sorting the create_party variable and arranging lowest to highest \n",
+    "reserves #displaying the decision"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Dialga', 'Regigas', 'Onix']"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "reserves = [('Onix',10),('Slowpoke',18),('Dialga', 2), ('Magikarp', 32),('Feebas', 22),('Swablu', 19), ('Regigigas', 3),('Unown', 5)]\n",
+    "def create_party(element):        #executing the create_party variable\n",
+    "    return element[1]             #return in element function\n",
+    "reserves.sort(key=create_party,)  #sorting the create_party variable\n",
+    "['Dialga', 'Regigas', 'Onix']     #displaying the decision"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[Charmander, Pidgey, Sandshrew, Rattata, Abra, Dialga]\n",
+      "[Charmander, Pidgey, Sandshrew, Rattata, Abra, Regigas]\n",
+      "[Charmander, Pidgey, Sandshrew, Rattata, Abra, Onix]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def create_party(party='Charmander, Pidgey, Sandshrew, Rattata, Abra', candidates='Dialga'): #executing the parties together with the pokemon I decide to include\n",
+    "    return '[{}, {}]'.format(party,candidates)           #returning the function with the format\n",
+    "print(create_party())                                    #print the Pokemon team                                   \n",
+    "print(create_party (candidates='Regigas'))               #print the Pokemon team together with the candidate in graded cell 2\n",
+    "print(create_party (candidates='Onix'))                  #print the Pokemon team together with the candidate in graded cell 2"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
