@@ -1,2 +1,2 @@
 # Linear-Algebra-for-CpE-Activities <br>
-Martin Phillips E. Liwag
+## Martin Phillips E. Liwag
